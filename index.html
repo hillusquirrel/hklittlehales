@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H.K. Littlehales | Turning Expertise into Legacy</title>
+    <meta name="description" content="Book coaching, ghostwriting, and author development for business leaders, coaches, and experts ready to share their knowledge with the world.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-bg: #FAFAFA;
+            --color-text: #1a1a1a;
+            --color-text-light: #555;
+            --color-accent: #1e3a5f;
+            --color-accent-light: #2d5a8a;
+            --color-white: #ffffff;
+            --color-border: #e0e0e0;
+            
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Raleway', 'Helvetica Neue', sans-serif;
+            
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 4rem;
+            --space-xl: 8rem;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            font-weight: 300;
+        }
+        
+        /* Typography */
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            font-weight: 500;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            letter-spacing: -0.02em;
+        }
+        
+        h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin-bottom: var(--space-md);
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            color: var(--color-accent);
+            margin-bottom: var(--space-sm);
+        }
+        
+        p {
+            margin-bottom: var(--space-sm);
+        }
+        
+        a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--color-accent-light);
+        }
+        
+        /* Layout */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        section {
+            padding: var(--space-xl) 0;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(250, 250, 250, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: var(--space-sm) 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--color-text);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: var(--space-md);
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--color-text-light);
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: var(--space-xl);
+            background: linear-gradient(135deg, var(--color-bg) 0%, #f0f0f0 100%);
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-lg);
+            align-items: center;
+        }
+        
+        .hero-text {
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .tagline {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--color-accent);
+            margin: var(--space-sm) 0 var(--space-md);
+            letter-spacing: 0.02em;
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--color-text-light);
+            margin-bottom: var(--space-md);
+            max-width: 500px;
+        }
+        
+        .hero-image {
+            position: relative;
+            animation: fadeIn 1.2s ease-out 0.3s both;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 4px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
+        
+        /* Button */
+        .btn {
+            display: inline-block;
+            padding: var(--space-sm) var(--space-md);
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border: 2px solid var(--color-accent);
+            border-radius: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: transparent;
+            color: var(--color-accent);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--color-accent);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: var(--color-white);
+        }
+        
+        .section-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto var(--space-lg);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+        }
+        
+        .service-card {
+            padding: var(--space-md);
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            border-color: var(--color-accent);
+            box-shadow: 0 10px 40px rgba(30, 58, 95, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .service-number {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--color-border);
+            line-height: 1;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .service-card h3 {
+            font-size: 1.2rem;
+        }
+        
+        .service-tagline {
+            font-style: italic;
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+            margin-top: var(--space-sm);
+            padding-top: var(--space-sm);
+            border-top: 1px solid var(--color-border);
+        }
+        
+        /* About Section */
+        .about {
+            background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-white) 100%);
+        }
+        
+        .about-content {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        
+        .about-content p {
+            font-size: 1.1rem;
+            margin-bottom: var(--space-md);
+        }
+        
+        .about-content p:first-of-type {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--color-accent);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--color-text);
+            color: var(--color-white);
+        }
+        
+        .testimonials h2 {
+            color: var(--color-white);
+            text-align: center;
+        }
+        
+        .brian-tracy-section {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+            padding-bottom: var(--space-lg);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .video-container {
+            max-width: 600px;
+            margin: var(--space-md) auto;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .video-container video {
+            width: 100%;
+            display: block;
+        }
+        
+        .video-placeholder {
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+            padding: var(--space-lg);
+            color: var(--color-white);
+            text-align: center;
+        }
+        
+        .brian-quote {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-style: italic;
+            max-width: 700px;
+            margin: var(--space-md) auto 0;
+            line-height: 1.6;
+        }
+        
+        .brian-attribution {
+            margin-top: var(--space-sm);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-md);
+        }
+        
+        .testimonial-card {
+            padding: var(--space-md);
+            background: rgba(255,255,255,0.05);
+            border-radius: 4px;
+            border-left: 3px solid var(--color-accent-light);
+        }
+        
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: var(--space-sm);
+            opacity: 0.9;
+        }
+        
+        .testimonial-author {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        /* Contact Section */
+        .contact {
+            text-align: center;
+            background-color: var(--color-white);
+        }
+        
+        .contact h2 {
+            margin-bottom: var(--space-sm);
+        }
+        
+        .contact-intro {
+            font-size: 1.1rem;
+            color: var(--color-text-light);
+            max-width: 500px;
+            margin: 0 auto var(--space-md);
+        }
+        
+        .contact-options {
+            margin-top: var(--space-md);
+        }
+        
+        .contact-email {
+            display: block;
+            margin-top: var(--space-sm);
+            font-size: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            padding: var(--space-md) 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            border-top: 1px solid var(--color-border);
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 900px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-image {
+                order: -1;
+            }
+            
+            .hero-image img {
+                max-width: 280px;
+            }
+            
+            .hero-description {
+                margin: 0 auto var(--space-md);
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .nav-links {
+                display: none;
+            }
+            
+            section {
+                padding: var(--space-lg) 0;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .tagline {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">H.K. Littlehales</a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>H.K. Littlehales</h1>
+                    <p class="tagline">Turning Expertise into Legacy</p>
+                    <p class="hero-description">
+                        I help business leaders, coaches, and experts transform their knowledge into books that open doors, build credibility, and outlast trends.
+                    </p>
+                    <a href="https://calendly.com/hkliterary/orientation-call" class="btn" target="_blank">Book a Discovery Call</a>
+                </div>
+                <div class="hero-image">
+                    <img src="hillu_portrait.jpg" alt="H.K. Littlehales">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-intro">
+                <h2>How I Can Help</h2>
+                <p>Whether you want to write your own book with guidance, need strategic positioning, or want to hand over the writing entirely—I meet you where you are.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-number">01</div>
+                    <h3>Book Coaching</h3>
+                    <p>You have the expertise. You want the satisfaction of writing it yourself. But you need guidance on the craft, the structure, and the process.</p>
+                    <p>I provide writing craft fundamentals, practical hacks, custom outlines with prompts that unlock your knowledge, and ongoing editorial feedback as you write.</p>
+                    <p class="service-tagline">You write. I guide. Your voice, your book.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-number">02</div>
+                    <h3>Positioning & Research</h3>
+                    <p>A good book isn't enough. It needs to find its readers, fill a gap in the market, and position you as the go-to expert.</p>
+                    <p>I provide target reader analysis, competitive landscape research, your unique angle and messaging, and author branding that aligns with your goals.</p>
+                    <p class="service-tagline">Know your market before you write.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-number">03</div>
+                    <h3>Ghostwriting</h3>
+                    <p>You have the knowledge. I have the craft. Together, we create a book that sounds like you—because it comes from you.</p>
+                    <p>Full ghostwriting, or combined with positioning and market research for a complete package.</p>
+                    <p class="service-tagline">Your expertise. Your legacy. My pen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>About</h2>
+                <p>I've spent my career helping people find the right words.</p>
+                <p>As a journalist, I learned to tell stories that matter. In a decade of change management across Europe and China, I learned to translate complex ideas into language that moves people to action.</p>
+                <p>Now I help experts, business leaders, and coaches do the same—through books that capture their knowledge and establish their legacy.</p>
+                <p>I work with authors at every stage: from first idea to finished manuscript. Whether you want to write your own book with guidance, or hand over the writing entirely, I meet you where you are.</p>
+                <p>My clients include authors published through Brian Tracy Publishing, entrepreneurs building their personal brands, and professionals ready to share what they've learned with the world.</p>
+                <p><em>Based in England. Working globally.</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>What Clients Say</h2>
+            
+            <div class="brian-tracy-section">
+                <div class="video-container">
+                    <video controls>
+                        <source src="brian-tracy-testimonial.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <p class="brian-quote">
+                    "Thank you very much for the wonderful contribution you have made to our books, with your design, and your copy, and your artwork and your fine work over the years. We really appreciate everything that you do and thank you from the bottom of our hearts."
+                </p>
+                <p class="brian-attribution">— Brian Tracy</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"Absolutely brilliant insight. Knowledgeable about the craft, but also a wonderful all-round human being. Strongly recommend."</p>
+                    <p class="testimonial-author">— A.P.H., Non-Fiction Author</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p>"I am absolutely grateful and so honoured to have you a part of this journey."</p>
+                    <p class="testimonial-author">— B.K., Business Author</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p>"You help me find motivation every single time, even when I think I have lost my mojo. You're the closest thing to a therapist I have ever had."</p>
+                    <p class="testimonial-author">— M.L., Author & Sales Professional</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p>"This is a huge leap forward and a strategic bullseye. You've perfectly captured the analysis, the emotions, and the provocative arguments. Every chapter is a goldmine."</p>
+                    <p class="testimonial-author">— Ghostwriting Client, German Thought Leader</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Ready to Turn Your Expertise into a Book?</h2>
+            <p class="contact-intro">Every book starts with a conversation. Let's talk about your idea, your goals, and how I can help you get there.</p>
+            
+            <a href="https://calendly.com/hkliterary/orientation-call" class="btn" target="_blank">Book a Free Discovery Call</a>
+            
+            <div class="contact-options">
+                <p>Or email me directly:</p>
+                <a href="mailto:me@hklittlehales.com" class="contact-email">me@hklittlehales.com</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 H.K. Littlehales. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Smooth scroll for older browsers -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
